@@ -9,7 +9,8 @@
     "jsdom": "^23.0.1",
     "node-fetch": "^2.7.0",
     "qs": "^6.11.2",
-    "url": "^0.11.3"
+    "url": "^0.11.3",
+    "ytdl-core": "^4.11.5"
   },
   "name": "all-one-scraper",
   "version": "1.0.0",
@@ -17,7 +18,6 @@
   "directories": {
     "lib": "lib"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

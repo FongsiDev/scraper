@@ -12,23 +12,20 @@ const YouTubeScraper = require("./lib/YouTube-Downloader/Scraper.js");
 
 function downloadTiktokVideo(url) {
   return new Promise((resolve, reject) => {
-    TiktokDownloader.tikVideo(url)
-      .then(resolve)
-      .catch(reject);
+    TiktokDownloader.tikVideo(url).then(resolve).catch(reject);
   });
 }
 
 function downloadTiktokUser(url) {
   return new Promise((resolve, reject) => {
-    TiktokDownloader.tikUser(url)
-      .then(resolve)
-      .catch(reject);
+    TiktokDownloader.tikUser(url).then(resolve).catch(reject);
   });
 }
 
 function downloadYouTubeSearch(...q) {
   return new Promise((resolve, reject) => {
-    new YouTubeScraper().search(...q)
+    new YouTubeScraper()
+      .search(...q)
       .then(resolve)
       .catch(reject);
   });
@@ -65,7 +62,7 @@ function downloadByService(url) {
     } else if (url.match(/youtube\.com/i)) {
       resolve(downloadYouTube(url));
     } else {
-      reject('Unsupported service or invalid URL');
+      reject("Unsupported service or invalid URL");
     }
   });
 }
@@ -85,5 +82,5 @@ module.exports = {
     search: downloadYouTubeSearch,
     down: downloadYouTube,
   },
-  AutoDL: downloadByService
-}
+  AutoDL: downloadByService,
+};

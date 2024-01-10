@@ -4,9 +4,11 @@ async function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-console.log(AllOneDownloader)
+console.log(AllOneDownloader);
 //Tiktok; Video
-AllOneDownloader.TiktokVideo("https://vt.tiktok.com/ZSNgav3uQ/").then(console.log);
+AllOneDownloader.TiktokVideo("https://vt.tiktok.com/ZSNgav3uQ/").then(
+  console.log,
+);
 /*
 //Tiktok; Image
 AllOneDownloader.TiktokVideo("https://vt.tiktok.com/ZSNgmJ7X6/").then(console.log);
