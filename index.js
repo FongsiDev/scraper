@@ -36,7 +36,7 @@ function downloadYouTubeSearch(...q) {
 
 function downloadYouTube(...args) {
   return new Promise((resolve, reject) => {
-    YouTubeDownloader(...args)
+    YouTubeDownloader.ytdl(...args)
       .then(resolve)
       .catch(reject);
   });
