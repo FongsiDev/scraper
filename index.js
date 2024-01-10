@@ -63,7 +63,7 @@ function downloadByService(url) {
     } else if (url.match(/pinterest/i)) {
       resolve(PinterestDownloader(url));
     } else if (url.match(/youtube\.com/i)) {
-      resolve(YouTubeDownloader(url));
+      resolve(downloadYouTube(url));
     } else {
       reject('Unsupported service or invalid URL');
     }
