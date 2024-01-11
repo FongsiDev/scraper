@@ -42,27 +42,60 @@ function downloadYouTube(...args) {
 function downloadByService(url) {
   return new Promise((resolve, reject) => {
     if (url.match(/tiktok/i)) {
-      resolve(downloadTiktokVideo(url));
+      resolve({
+        type: "tiktok",
+        ...downloadTiktokVideo(url),
+      });
     } else if (url.match(/instagram/i)) {
-      resolve(InstagramDownloader(url));
+      resolve({
+        type: "instagram",
+        ...InstagramDownloader(url),
+      });
     } else if (url.match(/capcut/i)) {
-      resolve(CapcutDownloader(url));
+      resolve({
+        type: "capcut",
+        ...CapcutDownloader(url),
+      });
     } else if (url.match(/drive\.google\.com/i)) {
-      resolve(DriveDownloader(url));
+      resolve({
+        type: "drive",
+        ...DriveDownloader(url),
+      });
     } else if (url.match(/mediafire/i)) {
-      resolve(MediaFireDownloader(url));
+      resolve({
+        type: "mediafire",
+        ...MediaFireDownloader(url),
+      });
     } else if (url.match(/facebook/i)) {
-      resolve(FacebookDownloader(url));
+      resolve({
+        type: "facebook",
+        ...FacebookDownloader(url),
+      });
     } else if (url.match(/twitter/i)) {
-      resolve(TwitterDownloader(url));
+      resolve({
+        type: "twitter",
+        ...TwitterDownloader(url),
+      });
     } else if (url.match(/spotify/i)) {
-      resolve(SpotifyDownloader(url));
+      resolve({
+        type: "spotify",
+        ...SpotifyDownloader(url),
+      });
     } else if (url.match(/pinterest/i)) {
-      resolve(PinterestDownloader(url));
+      resolve({
+        type: "pinterest",
+        ...PinterestDownloader(url),
+      });
     } else if (url.match(/youtube\.com/i)) {
-      resolve(downloadYouTube(url));
+      resolve({
+        type: "youtube",
+        ...downloadYouTube(url),
+      });
     } else {
-      reject("Unsupported service or invalid URL");
+      reject({
+        status: 401,
+        msg: "Unsupported service or invalid URL",
+      });
     }
   });
 }
