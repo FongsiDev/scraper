@@ -40,56 +40,56 @@ function downloadYouTube(...args) {
 }
 
 function downloadByService(url) {
-  return new Promise((resolve, reject) => {
+  return new Promise(async (resolve, reject) => {
     if (url.match(/tiktok/i)) {
       resolve({
         type: "tiktok",
-        ...downloadTiktokVideo(url),
+        ...(await downloadTiktokVideo(url)),
       });
     } else if (url.match(/instagram/i)) {
       resolve({
         type: "instagram",
-        ...InstagramDownloader(url),
+        ...(await InstagramDownloader(url)),
       });
     } else if (url.match(/capcut/i)) {
       resolve({
         type: "capcut",
-        ...CapcutDownloader(url),
+        ...(await CapcutDownloader(url)),
       });
     } else if (url.match(/drive\.google\.com/i)) {
       resolve({
         type: "drive",
-        ...DriveDownloader(url),
+        ...(await DriveDownloader(url)),
       });
     } else if (url.match(/mediafire/i)) {
       resolve({
         type: "mediafire",
-        ...MediaFireDownloader(url),
+        ...(await MediaFireDownloader(url)),
       });
     } else if (url.match(/facebook/i)) {
       resolve({
         type: "facebook",
-        ...FacebookDownloader(url),
+        ...(await FacebookDownloader(url)),
       });
     } else if (url.match(/twitter/i)) {
       resolve({
         type: "twitter",
-        ...TwitterDownloader(url),
+        ...(await TwitterDownloader(url)),
       });
     } else if (url.match(/spotify/i)) {
       resolve({
         type: "spotify",
-        ...SpotifyDownloader(url),
+        ...(await SpotifyDownloader(url)),
       });
     } else if (url.match(/pinterest/i)) {
       resolve({
         type: "pinterest",
-        ...PinterestDownloader(url),
+        ...(await PinterestDownloader(url)),
       });
     } else if (url.match(/youtube\.com/i)) {
       resolve({
         type: "youtube",
-        ...downloadYouTube(url),
+        ...(await downloadYouTube(url)),
       });
     } else {
       reject({
