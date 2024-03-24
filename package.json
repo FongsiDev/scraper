@@ -14,7 +14,7 @@
     "ytdl-core": "^4.11.5"
   },
   "name": "@fongsi/scraper",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.js",
   "directories": {
     "lib": "lib"
@@ -23,7 +23,16 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "fongsidev",
   "license": "ISC",
-  "description": ""
+  "description": "**@fongsi/scraper** adalah sebuah pustaka yang memungkinkan Anda untuk mengunduh berbagai jenis konten dari berbagai platform daring seperti TikTok, Instagram, Capcut, Google Drive, dan banyak lagi.",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FongsiDev/scraper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FongsiDev/scraper/issues"
+  },
+  "homepage": "https://github.com/FongsiDev/scraper#readme"
 }
