@@ -1,15 +1,20 @@
-const TiktokDownloader = require("./lib/Tiktok-Downloader.js");
-const InstagramDownloader = require("./lib/Instagram-Downloader.js");
-const CapcutDownloader = require("./lib/Capcut-Downloader.js");
-const DriveDownloader = require("./lib/Drive-Downloader.js");
-const MediaFireDownloader = require("./lib/MediaFire-Downloader.js");
-const FacebookDownloader = require("./lib/Facebook-Downloader.js");
-const TwitterDownloader = require("./lib/Twitter-Downloader.js");
-const SpotifyDownloader = require("./lib/Spotify-Downloader.js");
-const PinterestDownloader = require("./lib/Pinterest-Downloader.js");
-const YouTubeDownloader = require("./lib/YouTube-Downloader/Down.js");
-const YouTubeScraper = require("./lib/YouTube-Downloader/Scraper.js");
+/* DOWNLOADER */
+const TiktokDownloader = require("./lib/Downloaders/Tiktok-Downloader.js");
+const InstagramDownloader = require("./lib/Downloaders/Instagram-Downloader.js");
+const CapcutDownloader = require("./lib/Downloaders/Capcut-Downloader.js");
+const DriveDownloader = require("./lib/Downloaders/Drive-Downloader.js");
+const MediaFireDownloader = require("./lib/Downloaders/MediaFire-Downloader.js");
+const FacebookDownloader = require("./lib/Downloaders/Facebook-Downloader.js");
+const TwitterDownloader = require("./lib/Downloaders/Twitter-Downloader.js");
+const SpotifyDownloader = require("./lib/Downloaders/Spotify-Downloader.js");
+const PinterestDownloader = require("./lib/Downloaders/Pinterest-Downloader.js");
+const YouTubeDownloader = require("./lib/Downloaders/YouTube-Downloader/Down.js");
+const YouTubeScraper = require("./lib/Downloaders/YouTube-Downloader/Scraper.js");
+const SfileDownloader = require("./lib/Downloaders/Sfile-Downloader.js");
 
+/* SHORT URL */
+
+/* FUNCTIONS */
 function downloadTiktokVideo(url) {
   return new Promise((resolve, reject) => {
     TiktokDownloader.tikVideo(url).then(resolve).catch(reject);
@@ -39,6 +44,7 @@ function downloadYouTube(...args) {
   });
 }
 
+/* AUTO DOWNLOADER BY URL */
 function downloadByService(url) {
   return new Promise(async (resolve, reject) => {
     if (url.match(/tiktok/i)) {
@@ -91,6 +97,11 @@ function downloadByService(url) {
         type: "youtube",
         ...(await downloadYouTube(url)),
       });
+    } else if (url.match(/sfile\.mobi/i)) {
+      resolve({
+        type: "sfile",
+        ...(await SfileDownloader(url)),
+      });
     } else {
       reject({
         status: 401,
@@ -100,7 +111,10 @@ function downloadByService(url) {
   });
 }
 
+/* IMPORT ALL */
+
 module.exports = {
+  /* DOWNLOADER */
   TiktokVideo: downloadTiktokVideo,
   TiktokUser: downloadTiktokUser,
   Instagram: InstagramDownloader,
@@ -111,9 +125,11 @@ module.exports = {
   Twitter: TwitterDownloader,
   Spotify: SpotifyDownloader,
   Pinterest: PinterestDownloader,
+  Sfile: SfileDownloader,
   YouTube: {
     search: downloadYouTubeSearch,
     down: downloadYouTube,
   },
   AutoDL: downloadByService,
+  /* SHORT URL */
 };
