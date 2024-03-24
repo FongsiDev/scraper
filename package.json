@@ -6,14 +6,15 @@
     "http": "^0.0.1-security",
     "https": "^1.0.0",
     "human-readable": "^0.2.1",
+    "humanoid-js": "^1.0.1",
     "jsdom": "^23.0.1",
     "node-fetch": "^2.7.0",
     "qs": "^6.11.2",
     "url": "^0.11.3",
     "ytdl-core": "^4.11.5"
   },
-  "name": "all-one-scraper",
-  "version": "1.0.0",
+  "name": "@fongsi/scraper",
+  "version": "1.0.1",
   "main": "index.js",
   "directories": {
     "lib": "lib"
