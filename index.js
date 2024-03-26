@@ -14,6 +14,9 @@ const SfileDownloader = require("./lib/Downloaders/Sfile-Downloader.js");
 
 /* SHORT URL */
 
+/* TOOLS */
+const ToolGtts = require("./lib/Tools/Gtts.js");
+
 /* FUNCTIONS */
 function downloadTiktokVideo(url) {
   return new Promise((resolve, reject) => {
@@ -115,6 +118,7 @@ function downloadByService(url) {
 
 module.exports = {
   /* DOWNLOADER */
+  AutoDL: downloadByService,
   TiktokVideo: downloadTiktokVideo,
   TiktokUser: downloadTiktokUser,
   Instagram: InstagramDownloader,
@@ -130,6 +134,7 @@ module.exports = {
     search: downloadYouTubeSearch,
     down: downloadYouTube,
   },
-  AutoDL: downloadByService,
   /* SHORT URL */
+  /* TOOLS */
+  Gtts: ToolGtts,
 };
