@@ -14,7 +14,7 @@
     "ytdl-core": "^4.11.5"
   },
   "name": "@fongsidev/scraper",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "index.js",
   "directories": {
     "lib": "lib"
