@@ -166,7 +166,18 @@ async function sleep(ms) {
     searchType: "playlist",
   }).then(console.log);
 })();
-*/
-//Google Text To Speech
 
+//Google Text To Speech
 FongsiDev_Scraper.Gtts("Hello World", "en").then(console.log);
+*/
+
+//Gemini Google ( Not finished yet )
+/*FongsiDev_Scraper.GGemini(
+  "<cookies _U>",
+  "helo",
+).then(console.log);
+*/
+//Translator
+new FongsiDev_Scraper.Translator("Hello friends", "id")
+  .translate()
+  .then(console.log);

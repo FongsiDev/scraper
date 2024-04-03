@@ -103,6 +103,41 @@ FongsiDev_Scraper.AutoDLParms("https://vm.tiktok.com/ZMMMHusqo/").then(
 FongsiDev_Scraper.Gtts("Hello World", "en").then(console.log);
 ```
 
+## Google Translator
+
+```javascript
+new FongsiDev_Scraper.Translator("Hello World", "id")
+  .translate()
+  .then(console.log);
+
+//supported Languages
+const supportedLanguages = [
+  "ar",
+  "ur",
+  "en", //Default
+  "fr",
+  "de",
+  "id",
+  "gu",
+  "hi",
+  "it",
+  "ja",
+  "kn",
+  "ta",
+  "te",
+  "bn",
+  "ml",
+  "mr",
+  "ne",
+  "pa",
+  "es",
+  "ru",
+  "pt",
+  "tr",
+  "vi",
+];
+```
+
 ### Credit
 
 Pustaka ini dikembangkan oleh [@FongsiDev](https://github.com/fongsidev).

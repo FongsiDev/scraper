@@ -12,10 +12,14 @@ const YouTubeDownloader = require("./lib/Downloaders/YouTube-Downloader/Down.js"
 const YouTubeScraper = require("./lib/Downloaders/YouTube-Downloader/Scraper.js");
 const SfileDownloader = require("./lib/Downloaders/Sfile-Downloader.js");
 
-/* SHORT URL */
+/* AI */
+const GGemini = require("./lib/AI/G-Gemini.js");
 
 /* TOOLS */
 const ToolGtts = require("./lib/Tools/Gtts.js");
+const ToolTranslator = require("./lib/Tools/Translator.js");
+
+/* SHORT URL */
 
 /* FUNCTIONS */
 function downloadTiktokVideo(url) {
@@ -134,7 +138,10 @@ module.exports = {
     search: downloadYouTubeSearch,
     down: downloadYouTube,
   },
-  /* SHORT URL */
+  /* AI */
+  GGemini,
   /* TOOLS */
   Gtts: ToolGtts,
+  Translator: ToolTranslator,
+  /* SHORT URL */
 };
