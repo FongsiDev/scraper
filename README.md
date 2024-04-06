@@ -1,4 +1,4 @@
-## Fongsi Scraper
+## FongsiDev Scraper
 
 **@fongsidev/scraper** adalah sebuah pustaka yang memungkinkan Anda untuk mengunduh berbagai jenis konten dari berbagai platform daring seperti TikTok, Instagram, Capcut, Google Drive, dan banyak lagi.
 
@@ -136,6 +136,40 @@ const supportedLanguages = [
   "tr",
   "vi",
 ];
+```
+
+## Google Lens
+
+```javascript
+function readFile(filePath) {
+  return new Promise((resolve, reject) => {
+    fs.readFile(filePath, (err, data) => {
+      if (err) {
+        reject(err);
+        return;
+      }
+      resolve(data);
+    });
+  });
+}
+
+//This is the URL version
+FongsiDev_Scraper.GoogleLens(
+  "https://telegra.ph/file/f0ff2f9f373c962d8e2e5.jpg",
+).then(console.log);
+
+//This is the Buffer File version
+readFile("./tmp/4420937.png").then((data) => {
+  console.log("Isi file:", data);
+  FongsiDev_Scraper.GoogleLens(data).then(console.log);
+});
+```
+
+## Short URL
+
+```javascript
+//Website: https://shorter.me/
+FongsiDev_Scraper.Short1("https://google.com").then(console.log);
 ```
 
 ### Credit

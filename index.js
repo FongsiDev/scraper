@@ -1,3 +1,26 @@
+/* IDK :) */
+
+global.APIsFSPR = {};
+global.APIFSPR = (name, path = "/", query = {}, apikeyqueryname) =>
+  (name in global.APIsFSPR ? global.APIsFSPR[name] : name) +
+  path +
+  (query || apikeyqueryname
+    ? "?" +
+      new URLSearchParams(
+        Object.entries({
+          ...query,
+          ...(apikeyqueryname
+            ? {
+                [apikeyqueryname]:
+                  global.APIsFSPR[
+                    name in global.APIsFSPR ? global.APIsFSPR[name] : name
+                  ],
+              }
+            : {}),
+        }),
+      )
+    : "");
+
 /* DOWNLOADER */
 const TiktokDownloader = require("./lib/Downloaders/Tiktok-Downloader.js");
 const InstagramDownloader = require("./lib/Downloaders/Instagram-Downloader.js");
@@ -18,8 +41,10 @@ const GGemini = require("./lib/AI/G-Gemini.js");
 /* TOOLS */
 const ToolGtts = require("./lib/Tools/Gtts.js");
 const ToolTranslator = require("./lib/Tools/Translator.js");
+const ToolGLens = require("./lib/Tools/GoogleLens.js");
 
 /* SHORT URL */
+const Short1 = require("./lib/Shorts/Shorter.Me.js");
 
 /* FUNCTIONS */
 function downloadTiktokVideo(url) {
@@ -143,5 +168,7 @@ module.exports = {
   /* TOOLS */
   Gtts: ToolGtts,
   Translator: ToolTranslator,
+  GoogleLens: ToolGLens,
   /* SHORT URL */
+  Short1,
 };

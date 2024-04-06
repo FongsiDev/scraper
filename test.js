@@ -1,7 +1,20 @@
+const fs = require("fs");
 const FongsiDev_Scraper = require("./");
 
 async function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function readFile(filePath) {
+  return new Promise((resolve, reject) => {
+    fs.readFile(filePath, (err, data) => {
+      if (err) {
+        reject(err);
+        return;
+      }
+      resolve(data);
+    });
+  });
 }
 
 /*console.log(FongsiDev_Scraper);
@@ -177,7 +190,19 @@ FongsiDev_Scraper.Gtts("Hello World", "en").then(console.log);
   "helo",
 ).then(console.log);
 */
+
 //Translator
-new FongsiDev_Scraper.Translator("Hello friends", "id")
+/*new FongsiDev_Scraper.Translator("Hello friends", "id")
   .translate()
   .then(console.log);
+*/
+
+//Google Lens Url or Buffer
+FongsiDev_Scraper.GoogleLens(
+  "https://telegra.ph/file/f0ff2f9f373c962d8e2e5.jpg",
+).then(console.log);
+
+readFile("./tmp/4420937.png").then((data) => {
+  console.log("Isi file:", data);
+  FongsiDev_Scraper.GoogleLens(data).then(console.log);
+});
