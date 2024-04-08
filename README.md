@@ -1,6 +1,6 @@
 ## FongsiDev Scraper
 
-**@fongsidev/scraper** adalah sebuah pustaka yang memungkinkan Anda untuk mengunduh berbagai jenis konten dari berbagai platform daring seperti TikTok, Instagram, Capcut, Google Drive, dan banyak lagi.
+**@fongsidev/scraper** is a library that allows you to download various types of content from various online platforms such as TikTok, Instagram, Capcut, Google Drive, and many more and also provides very useful tools/codes :).
 
 ### Package Install Code
 
@@ -8,7 +8,7 @@
 npm install @fongsidev/scraper
 ```
 
-### Cara Penggunaan
+### Method of use
 
 ```javascript
 const FongsiDev_Scraper = require("@fongsidev/scraper");
@@ -88,10 +88,10 @@ FongsiDev_Scraper.YouTube.search("NCS", {
 }).then(console.log);
 ```
 
-### Kode AutoDown
+### Code AutoDown
 
 ```javascript
-// Gunakan AutoDL Parms(url) untuk mengunduh konten
+// Use AutoDL Parms(url) to download content
 FongsiDev_Scraper.AutoDLParms("https://vm.tiktok.com/ZMMMHusqo/").then(
   console.log,
 );
@@ -172,14 +172,48 @@ readFile("./tmp/4420937.png").then((data) => {
 FongsiDev_Scraper.Short1("https://google.com").then(console.log);
 ```
 
-### Credit
+## Translate AI Web: www.freeaiimagegenerator.org
 
-Pustaka ini dikembangkan oleh [@FongsiDev](https://github.com/fongsidev).
+```
+new FongsiDev_Scraper.FAIIGGTranslate(
+"<Cookies _qurn=**>",
+)
+.translate("Hello friends", "id", /*quality, tone, max_results*/)
+.then(console.log);
 
-### Kontribusi
+//Quality
+/*
+   * Premium: 1
+   * Good: 0.75 <Default>
+   * Economy: 0.25
+   * Average: 0.5
+*/
 
-Jika Anda ingin berkontribusi pada pengembangan pustaka ini, silakan kirimkan pull request atau buat masalah (issue) di repositori GitHub kami: [FongsiDev/scraper](https://github.com/fongsidev/scraper).
+//Tone
+/*
+   * Funny: funny
+   * Casual: casual
+   * Excited: excited
+   * Professional: professional <Default>
+   * Witty: witty
+   * Sarcastic: sarcastic
+   * Feminine: feminine
+   * Masculine: masculine
+   * Bold: bold
+   * Dramatic: dramatic
+   * Gumpy: gumpy
+   * Secretive: secretive
+*/
+```
 
-### Lisensi
+### Credits
 
-Pustaka ini dilisensikan di bawah [lisensi MIT](https://opensource.org/licenses/MIT).
+This library was developed by [@FongsiDev](https://github.com/fongsidev).
+
+### Contribution
+
+If you would like to contribute to the development of this library, please submit a pull request or create an issue in our GitHub repository: [FongsiDev/scraper](https://github.com/fongsidev/scraper).
+
+### Licence
+
+This library is licensed under the [MIT license](https://opensource.org/licenses/MIT).

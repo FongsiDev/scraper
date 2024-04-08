@@ -37,6 +37,7 @@ const SfileDownloader = require("./lib/Downloaders/Sfile-Downloader.js");
 
 /* AI */
 const GGemini = require("./lib/AI/G-Gemini.js");
+const FAIIGGTranslate = require("./lib/AI/FAIIGG-Translate.js");
 
 /* TOOLS */
 const ToolGtts = require("./lib/Tools/Gtts.js");
@@ -164,7 +165,8 @@ module.exports = {
     down: downloadYouTube,
   },
   /* AI */
-  GGemini,
+  GGemini, //Not yet fixed
+  FAIIGGTranslate,
   /* TOOLS */
   Gtts: ToolGtts,
   Translator: ToolTranslator,

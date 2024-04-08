@@ -198,11 +198,16 @@ FongsiDev_Scraper.Gtts("Hello World", "en").then(console.log);
 */
 
 //Google Lens Url or Buffer
-FongsiDev_Scraper.GoogleLens(
+/*FongsiDev_Scraper.GoogleLens(
   "https://telegra.ph/file/f0ff2f9f373c962d8e2e5.jpg",
 ).then(console.log);
 
 readFile("./tmp/4420937.png").then((data) => {
   console.log("Isi file:", data);
   FongsiDev_Scraper.GoogleLens(data).then(console.log);
-});
+});*/
+
+//FAIIGGTranslate AI
+new FongsiDev_Scraper.FAIIGGTranslate("<Cookies _qurn=**>")
+  .translate("Hello friends", "id")
+  .then(console.log);
