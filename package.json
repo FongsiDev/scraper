@@ -14,7 +14,7 @@
     "ytdl-core": "^4.11.5"
   },
   "name": "@fongsidev/scraper",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "index.js",
   "directories": {
     "lib": "lib"
@@ -91,7 +91,7 @@
   ],
   "author": "fongsidev",
   "license": "ISC",
-  "description": "**@fongsidev/scraper** adalah sebuah pustaka yang memungkinkan Anda untuk mengunduh berbagai jenis konten dari berbagai platform daring seperti TikTok, Instagram, Capcut, Google Drive, dan banyak lagi.",
+  "description": "@fongsidev/scraper is a library that allows you to download various types of content from various online platforms such as TikTok, Instagram, Capcut, Google Drive, and many more and also provides very useful tools/codes :).",
   "devDependencies": {},
   "repository": {
     "type": "git",
