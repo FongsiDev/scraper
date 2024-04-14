@@ -1,0 +1,20 @@
+# Methods
+
+Here are the list of methods you can use in fongsidev/scraper:
+
+- <a href="/downloader/ttv">TiktokVideo</a>
+- <a href="/downloader/ig">Instagram</a>
+- <a href="/downloader/capcut">Capcut</a>
+- <a href="/downloader/drive">Drive Google</a>
+- <a href="/downloader/mediafire">MediaFire</a>
+- <a href="/downloader/facebook">Facebook</a>
+- <a href="/downloader/twitter">Twitter</a>
+- <a href="/downloader/spotify">Spotify</a>
+- <a href="/downloader/pinterest">Pinterest</a>
+- <a href="/downloader/sfile">Sfile</a>
+- YouTube
+  - <a href="/downloader/youtube/down">Down</a>
+  - <a href="/downloader/youtube/search">Search</a>
+  - <a href="/downloader/youtube/searchlanguage">By Lang</a>
+  - <a href="/downloader/youtube/searchtype">By Type</a>
+- <a href="/downloader/autodown">AutoDown</a>
