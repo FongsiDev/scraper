@@ -6,9 +6,9 @@ Shorter Me Web https://shorter.me/.
 FongsiDev_Scraper.Short1("https://google.com").then(console.log);
 ```
 
-| PARAMETER | TYPE   | DESCRIPTION            |
-| --------- | ------ | ---------------------- |
-| url       | string | Link |
+| PARAMETER | TYPE   | DESCRIPTION |
+| --------- | ------ | ----------- |
+| url       | string | Link        |
 
 Scope: `ASYNC`
 

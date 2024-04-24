@@ -8,8 +8,8 @@ FongsiDev_Scraper.YouTube.down(
 ).then(console.log);
 ```
 
-| PARAMETER | TYPE   | DESCRIPTION         |
-| --------- | ------ | ------------------- |
+| PARAMETER | TYPE   | DESCRIPTION             |
+| --------- | ------ | ----------------------- |
 | url       | string | Link from YouTube video |
 
 Scope: `ASYNC`

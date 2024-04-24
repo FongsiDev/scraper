@@ -35,10 +35,10 @@ const supportedLanguages = [
 ];
 ```
 
-| PARAMETER | TYPE   | DESCRIPTION            |
-| --------- | ------ | ---------------------- |
-| text       | string | For text that will be a change from lang |
-| lang | string | To change the text to the appropriate language |
+| PARAMETER | TYPE   | DESCRIPTION                                    |
+| --------- | ------ | ---------------------------------------------- |
+| text      | string | For text that will be a change from lang       |
+| lang      | string | To change the text to the appropriate language |
 
 Scope: `ASYNC`
 

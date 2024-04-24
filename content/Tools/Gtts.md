@@ -6,10 +6,10 @@ Google Text To Speech.
 FongsiDev_Scraper.Gtts("Hello World", "en").then(console.log);
 ```
 
-| PARAMETER | TYPE   | DESCRIPTION            |
-| --------- | ------ | ---------------------- |
-| text       | string | For Words it will be Speech |
-| lang | string | For the language of Speech |
+| PARAMETER | TYPE   | DESCRIPTION                 |
+| --------- | ------ | --------------------------- |
+| text      | string | For Words it will be Speech |
+| lang      | string | For the language of Speech  |
 
 Scope: `ASYNC`
 

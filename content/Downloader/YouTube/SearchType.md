@@ -16,10 +16,10 @@ FongsiDev_Scraper.YouTube.search("NCS", {
 }).then(console.log);
 ```
 
-| PARAMETER | TYPE   | DESCRIPTION         |
-| --------- | ------ | ------------------- |
-| text       | string | Text to search for videos on YouTube |
-| type       | string | Filter your search according to your type of believer |
+| PARAMETER | TYPE   | DESCRIPTION                                           |
+| --------- | ------ | ----------------------------------------------------- |
+| text      | string | Text to search for videos on YouTube                  |
+| type      | string | Filter your search according to your type of believer |
 
 Scope: `ASYNC`
 

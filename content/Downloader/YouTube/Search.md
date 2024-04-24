@@ -6,9 +6,9 @@ YouTube Search.
 FongsiDev_Scraper.YouTube.search("NCS").then(console.log);
 ```
 
-| PARAMETER | TYPE   | DESCRIPTION         |
-| --------- | ------ | ------------------- |
-| text       | string | Text to search for videos on YouTube |
+| PARAMETER | TYPE   | DESCRIPTION                          |
+| --------- | ------ | ------------------------------------ |
+| text      | string | Text to search for videos on YouTube |
 
 Scope: `ASYNC`
 

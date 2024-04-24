@@ -8,10 +8,10 @@ FongsiDev_Scraper.YouTube.search("NCS", {
 }).then(console.log);
 ```
 
-| PARAMETER | TYPE   | DESCRIPTION         |
-| --------- | ------ | ------------------- |
-| text       | string | Text to search for videos on YouTube |
-| lang       | string | Follow the language from Lang you give |
+| PARAMETER | TYPE   | DESCRIPTION                            |
+| --------- | ------ | -------------------------------------- |
+| text      | string | Text to search for videos on YouTube   |
+| lang      | string | Follow the language from Lang you give |
 
 Scope: `ASYNC`
 

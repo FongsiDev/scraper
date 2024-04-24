@@ -27,10 +27,10 @@ readFile("./tmp/4420937.png").then((data) => {
 });
 ```
 
-| PARAMETER | TYPE   | DESCRIPTION            |
-| --------- | ------ | ---------------------- |
-| image       | string | Link/ImagePath |
-| isShort | boolean | For Shorten URL from Google Lens
+| PARAMETER | TYPE    | DESCRIPTION                      |
+| --------- | ------- | -------------------------------- |
+| image     | string  | Link/ImagePath                   |
+| isShort   | boolean | For Shorten URL from Google Lens |
 
 Scope: `ASYNC`
 

@@ -8,8 +8,8 @@ FongsiDev_Scraper.AutoDown("URLs from tiktok, MediaFire, etc").then(
 );
 ```
 
-| PARAMETER | TYPE   | DESCRIPTION             |
-| --------- | ------ | ----------------------- |
+| PARAMETER | TYPE   | DESCRIPTION                       |
+| --------- | ------ | --------------------------------- |
 | url       | string | Link from All Docs Downloader url |
 
 Scope: `ASYNC`

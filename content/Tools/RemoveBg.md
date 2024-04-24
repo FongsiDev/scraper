@@ -6,9 +6,9 @@ Remove Background Web www.onlineconverter.com.
 FongsiDev_Scraper.RemoveBg("url or imagePath").then(console.log);
 ```
 
-| PARAMETER | TYPE   | DESCRIPTION            |
-| --------- | ------ | ---------------------- |
-| image       | string | For the Converter, the image becomes transparent |
+| PARAMETER | TYPE   | DESCRIPTION                                      |
+| --------- | ------ | ------------------------------------------------ |
+| image     | string | For the Converter, the image becomes transparent |
 
 Scope: `ASYNC`
 
