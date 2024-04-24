@@ -214,4 +214,4 @@ readFile("./tmp/4420937.png").then((data) => {
 */
 
 //Remove Background
-FongsiDev_Scraper.RemoveBg("<url/pathfile>").then(console.log);
+/*FongsiDev_Scraper.RemoveBg("<url/pathfile>").then(console.log);*/

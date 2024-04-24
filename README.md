@@ -9,6 +9,7 @@ npm install @fongsidev/scraper
 ```
 
 ### 📖 ([Documentation](https://fongsidev-scraper.surge.sh))
+
 ### 📋 ([ChangeLog](https://fongsidev-scraper.surge.sh/changelog))
 
 ### Credits

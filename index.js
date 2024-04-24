@@ -44,6 +44,9 @@ const ToolGtts = require("./lib/Tools/Gtts.js");
 const ToolTranslator = require("./lib/Tools/Translator.js");
 const ToolGLens = require("./lib/Tools/GoogleLens.js");
 const ToolRemoveBackground = require("./lib/Tools/RemoveBackground.js");
+const ToolDiscordCloud = require("./lib/Tools/DiscordCloud.js");
+
+/* Search */
 
 /* SHORT URL */
 const Short1 = require("./lib/Shorts/Shorter.Me.js");
@@ -173,6 +176,8 @@ module.exports = {
   Translator: ToolTranslator,
   GoogleLens: ToolGLens,
   RemoveBg: ToolRemoveBackground,
+  DiscordCloud: ToolDiscordCloud,
+  /* Search */
   /* SHORT URL */
   Short1,
 };
