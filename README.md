@@ -12,6 +12,8 @@ npm install @fongsidev/scraper
 
 ### 📋 ([ChangeLog](https://fongsidev-scraper.surge.sh/changelog))
 
+### ⚙️ ([Update Version 1.0.9 => 1.0.10](https://fongsidev-scraper.surge.sh/changelog))
+
 ### Credits
 
 This library was developed by [@FongsiDev](https://github.com/fongsidev).

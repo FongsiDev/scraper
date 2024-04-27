@@ -215,3 +215,18 @@ readFile("./tmp/4420937.png").then((data) => {
 
 //Remove Background
 /*FongsiDev_Scraper.RemoveBg("<url/pathfile>").then(console.log);*/
+
+//KarloAI
+const karloAI = new FongsiDev_Scraper.KarloAI("YOUR_TOKEN_HERE");
+
+karloAI
+  .generateImage({
+    prompt: "<YOUR_PROMPT>",
+    negativePrompt: "<YOUR_NEGATIGE_PROMPT>",
+  })
+  .then((data) => {
+    console.log("Generated image data:", data);
+  })
+  .catch((error) => {
+    console.error("Error generating image:", error);
+  });
