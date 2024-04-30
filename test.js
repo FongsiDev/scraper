@@ -95,7 +95,7 @@ function readFile(filePath) {
   FongsiDev_Scraper.Twitter(
     "https://x.com/TamimAfghan010/status/1766677668630503559?s=20",
   ).then(console.log);
-
+  
   await sleep(5000);
   console.clear();
   console.log("Spotify");
@@ -217,7 +217,7 @@ readFile("./tmp/4420937.png").then((data) => {
 /*FongsiDev_Scraper.RemoveBg("<url/pathfile>").then(console.log);*/
 
 //KarloAI
-const karloAI = new FongsiDev_Scraper.KarloAI("YOUR_TOKEN_HERE");
+/*const karloAI = new FongsiDev_Scraper.KarloAI("YOUR_TOKEN_HERE");
 
 karloAI
   .generateImage({
@@ -229,4 +229,4 @@ karloAI
   })
   .catch((error) => {
     console.error("Error generating image:", error);
-  });
+  });*/
