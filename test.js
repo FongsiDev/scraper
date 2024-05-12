@@ -214,7 +214,14 @@ readFile("./tmp/4420937.png").then((data) => {
 */
 
 //Remove Background
-/*FongsiDev_Scraper.RemoveBg("<url/pathfile>").then(console.log);*/
+//V1
+/*
+FongsiDev_Scraper.RemoveBg.v1("<url/pathfile>").then(console.log);
+*/
+//V2
+/*
+FongsiDev_Scraper.RemoveBg.v2("<url/pathfile>").then(console.log);
+*/
 
 //KarloAI
 /*const karloAI = new FongsiDev_Scraper.KarloAI("YOUR_TOKEN_HERE");

@@ -21,6 +21,38 @@ global.APIFSPR = (name, path = "/", query = {}, apikeyqueryname) =>
       )
     : "");
 
+global.resolveFSPR = (...args) => {
+  let data;
+  if (typeof args[0] === "object") {
+    data = args[0];
+  } else {
+    data = args.join(" ");
+  }
+  return {
+    status: 200,
+    data: data,
+    msg: null,
+  };
+};
+
+global.rejectFSPR = (msg) => {
+  return {
+    status: 404,
+    msg: msg?.message || msg,
+    data: null,
+  };
+};
+
+global.throwFSPR = (...args) => {
+  var data = global.resolveFSPR(...args);
+  data.status = 404;
+  data.msg = data.data;
+  data.data = null;
+  throw new Error(JSON.stringify(data));
+};
+
+global.isUrlFSPR = (str) => /^https?:\/\//.test(str);
+
 /* DOWNLOADER */
 const TiktokDownloader = require("./lib/Downloaders/Tiktok-Downloader.js");
 const InstagramDownloader = require("./lib/Downloaders/Instagram-Downloader.js");
@@ -141,10 +173,7 @@ function downloadByService(url) {
         ...(await SfileDownloader(url)),
       });
     } else {
-      reject({
-        status: 401,
-        msg: "Unsupported service or invalid URL",
-      });
+      reject(global.rejectFSPR("Unsupported service or invalid URL"));
     }
   });
 }
