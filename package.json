@@ -8,7 +8,7 @@
     "https": "^1.0.0",
     "human-readable": "^0.2.1",
     "humanoid-js": "^1.0.1",
-    "jsdom": "^23.0.1",
+    "jsdom": "^23.2.0",
     "metatag-crawler": "^2.1.0",
     "node-fetch": "^2.7.0",
     "qs": "^6.11.2",
@@ -16,7 +16,7 @@
     "ytdl-core": "^4.11.5"
   },
   "name": "@fongsidev/scraper",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "main": "index.js",
   "directories": {
     "lib": "lib"
