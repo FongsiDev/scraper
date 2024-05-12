@@ -16,19 +16,19 @@ karloAI
   .catch((error) => {
     console.error("Error generating image:", error);
   });
-  
+
 //Paste it into your console on the karlo.ai website to get the token;
 
 (function () {
   var cookie = (key) =>
     (new RegExp((key || "=") + "=(.*?); ", "gm").exec(
-      document.cookie + "; "
+      document.cookie + "; ",
     ) || ["", null])[1];
   if (cookie("authToken") !== null) {
     console.log("%cWorked!", "font-size: 50px");
     console.log(
       `%cYou now have your token in the clipboard!`,
-      "font-size: 16px"
+      "font-size: 16px",
     );
     return copy(cookie("authToken"));
   }
@@ -36,11 +36,11 @@ karloAI
     console.log("%cWorked!", "font-size: 50px");
     console.log(
       `%cYou now have your token in the clipboard!`,
-      "font-size: 16px"
+      "font-size: 16px",
     );
     return copy(cookie("karlo-image-auth-token"));
   }
-  console.log("%cFail!", "font-size: 50px");  
+  console.log("%cFail!", "font-size: 50px");
 })();
 ```
 

@@ -1,9 +1,16 @@
 ## .RemoveBg(image);
 
-Remove Background Web www.onlineconverter.com.
+Remove Background.
 
 ```js
-FongsiDev_Scraper.RemoveBg("url or imagePath").then(console.log);
+//V1
+/*
+FongsiDev_Scraper.RemoveBg.v1("<url/pathfile>").then(console.log); //Url
+*/
+//V2
+/*
+FongsiDev_Scraper.RemoveBg.v2("<url/pathfile>").then(console.log); //Buffer
+*/
 ```
 
 | PARAMETER | TYPE   | DESCRIPTION                                      |
