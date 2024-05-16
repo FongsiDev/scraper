@@ -9,7 +9,7 @@ FongsiDev_Scraper.RemoveBg.v1("<url/pathfile>").then(console.log); //Url
 */
 //V2
 /*
-FongsiDev_Scraper.RemoveBg.v2("<url/pathfile>").then(console.log); //Buffer
+FongsiDev_Scraper.RemoveBg.v2("<pathfile only>").then(console.log); //Buffer
 */
 ```
 
