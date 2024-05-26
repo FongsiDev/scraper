@@ -147,7 +147,7 @@ function downloadByService(url) {
         type: "facebook",
         ...(await FacebookDownloader(url)),
       });
-    } else if (url.match(/twitter/i)) {
+    } else if (url.match(/x\.com|twitter\.com/i)) {
       resolve({
         type: "twitter",
         ...(await TwitterDownloader(url)),
@@ -157,7 +157,7 @@ function downloadByService(url) {
         type: "spotify",
         ...(await SpotifyDownloader(url)),
       });
-    } else if (url.match(/pinterest/i)) {
+    } else if (url.match(/pinterest\.com|pin\.it/i)) {
       resolve({
         type: "pinterest",
         ...(await PinterestDownloader(url)),
