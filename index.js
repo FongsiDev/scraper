@@ -71,6 +71,7 @@ const SfileDownloader = require("./lib/Downloaders/Sfile-Downloader.js");
 const GGemini = require("./lib/AI/G-Gemini.js");
 const FAIIGGTranslate = require("./lib/AI/FAIIGG-Translate.js");
 const KarloAI = require("./lib/AI/KarloAI.js");
+const AiRateMyPhoto = require("./lib/AI/RateMyPhoto.js");
 
 /* TOOLS */
 const ToolGtts = require("./lib/Tools/Gtts.js");
@@ -202,6 +203,7 @@ module.exports = {
   //GGemini, //Not yet fixed
   FAIIGGTranslate,
   KarloAI,
+  AiRateMyPhoto,
   /* TOOLS */
   Gtts: ToolGtts,
   Translator: ToolTranslator,

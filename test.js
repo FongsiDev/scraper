@@ -1,5 +1,6 @@
 const fs = require("fs");
 const FongsiDev_Scraper = require("./");
+const test = require("ava");
 
 async function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -17,44 +18,153 @@ function readFile(filePath) {
   });
 }
 
-/*console.log(FongsiDev_Scraper);
-(async () => {
-  //Tiktok; Video
-  console.log("Tiktok Video");
-  await sleep(5000);
-  FongsiDev_Scraper.TiktokVideo("https://vm.tiktok.com/ZMMMHusqo/").then(
-    console.log,
-  );
+console.log(FongsiDev_Scraper);
 
-  await sleep(5000);
-  console.clear();
-  console.log("Tiktok Image");
-  await sleep(5000);
+var LinkVideoTiktok =
+  "https://www.tiktok.com/@akhwat_privatt05/video/7316508346620628230";
 
-  //Tiktok; Image
-  FongsiDev_Scraper.TiktokVideo("https://vm.tiktok.com/ZMMMH29hq/").then(
-    console.log,
-  );
+var LinkPictureTiktok =
+  "https://www.tiktok.com/@mokmin_17/photo/7297251749482597638";
 
-  await sleep(5000);
-  console.clear();
-  console.log("Instagram");
-  await sleep(5000);
+var LinkInstagram = "https://www.instagram.com/reel/C3iDBTSphq_";
 
-  //Instagram;
-  FongsiDev_Scraper.Instagram(
-    "https://www.instagram.com/reel/C3iDBTSphq_/?igsh=MWlrcWVtcmZteW81eg==",
-  ).then(console.log);
+var LinkCapcut = "https://www.capcut.com/t/Zs86jhoGV/";
 
-  await sleep(5000);
-  console.clear();
-  console.log("Capcut");
-  await sleep(5000);
+var LinkDrive =
+  "https://drive.google.com/file/d/1WHofxVvVyW-PLX0BNrpyYQ3SxxPlY3nu/view?usp=drivesdk";
 
-  //Capcut;
-  FongsiDev_Scraper.Capcut("https://www.capcut.com/t/Zs86jhoGV/").then(
-    console.log,
-  );
+var LinkMediaFire =
+  "https://www.mediafire.com/file/da52toz0dk3dmct/MediaFire_-_Getting_Started.pdf/file";
+
+var LinkFacebook =
+  "https://www.facebook.com/100269398188116/videos/401714047588473/?mibextid=rS40aB7S9Ucbxw6v";
+
+var LinkTwitter =
+  "https://x.com/TamimAfghan010/status/1766677668630503559?s=20";
+
+var LinkSpotify = "https://open.spotify.com/track/1fSln3JhzB7Asdi83JTvPa";
+
+test("Test Download Video Tiktok", async (t) => {
+  try {
+    await sleep(1000);
+    const E = await FongsiDev_Scraper.TiktokVideo(LinkVideoTiktok);
+    if (E.status !== 200) {
+      t.log(E);
+    }
+    console.log(E);
+    t.is(E, E);
+  } catch (err) {
+    t.log(err);
+  }
+});
+
+test("Test Download Picture Tiktok", async (t) => {
+  try {
+    await sleep(3000);
+    const E = await FongsiDev_Scraper.TiktokVideo(LinkPictureTiktok);
+    if (E.status !== 200) {
+      t.log(E);
+    }
+    console.log(E);
+    t.is(E, E);
+  } catch (err) {
+    t.log(err);
+  }
+});
+
+test("Test Download Instagram", async (t) => {
+  try {
+    const E = await FongsiDev_Scraper.Instagram(LinkInstagram);
+    if (E.status !== 200) {
+      t.log(E);
+    }
+    console.log(E);
+    t.is(E, E);
+  } catch (err) {
+    t.log(err);
+  }
+});
+
+test("Test Download Capcut", async (t) => {
+  try {
+    const E = await FongsiDev_Scraper.Capcut(LinkCapcut);
+    if (E.status !== 200) {
+      t.log(E);
+    }
+    console.log(E);
+    t.is(E, E);
+  } catch (err) {
+    t.log(err);
+  }
+});
+
+test("Test Download Drive", async (t) => {
+  try {
+    const E = await FongsiDev_Scraper.Drive(LinkDrive);
+    if (E.status !== 200) {
+      t.log(E);
+    }
+    console.log(E);
+    t.is(E, E);
+  } catch (err) {
+    t.log(err);
+  }
+});
+
+test("Test Download MediaFire", async (t) => {
+  try {
+    const E = await FongsiDev_Scraper.MediaFire(LinkMediaFire);
+    if (E.status !== 200) {
+      t.log(E);
+    }
+    console.log(E);
+    t.is(E, E);
+  } catch (err) {
+    t.log(err);
+  }
+});
+
+test("Test Download Facebook", async (t) => {
+  try {
+    const E = await FongsiDev_Scraper.Facebook(LinkFacebook);
+    if (E.status !== 200) {
+      t.log(E);
+    }
+    console.log(E);
+    t.is(E, E);
+  } catch (err) {
+    t.log(err);
+  }
+});
+
+test("Test Download Twitter", async (t) => {
+  try {
+    const E = await FongsiDev_Scraper.Twitter(LinkTwitter);
+    if (E.status !== 200) {
+      t.log(E);
+    }
+    console.log(E);
+    t.is(E, E);
+  } catch (err) {
+    t.log(err);
+  }
+});
+
+test("Test Download Spotify", async (t) => {
+  try {
+    const E = await FongsiDev_Scraper.Spotify(LinkSpotify);
+    if (E.status !== 200) {
+      t.log(E);
+    }
+    console.log(E);
+    t.is(E, E);
+  } catch (err) {
+    t.log(err);
+  }
+});
+
+/*(async () => {
+
 
   await sleep(5000);
   console.clear();
@@ -63,7 +173,7 @@ function readFile(filePath) {
 
   //Drive;
   FongsiDev_Scraper.Drive(
-    "https://drive.google.com/file/d/1WHofxVvVyW-PLX0BNrpyYQ3SxxPlY3nu/view?usp=drivesdk",
+    "",
   ).then(console.log);
 
   await sleep(5000);
@@ -93,7 +203,7 @@ function readFile(filePath) {
 
   //Twitter;
   FongsiDev_Scraper.Twitter(
-    "https://x.com/TamimAfghan010/status/1766677668630503559?s=20",
+    "",
   ).then(console.log);
   
   await sleep(5000);
@@ -103,7 +213,7 @@ function readFile(filePath) {
 
   //Spotify;
   FongsiDev_Scraper.Spotify(
-    "https://open.spotify.com/track/1fSln3JhzB7Asdi83JTvPa",
+    "",
   ).then(console.log);
 
   await sleep(5000);
