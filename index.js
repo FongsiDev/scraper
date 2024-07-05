@@ -63,8 +63,7 @@ const FacebookDownloader = require("./lib/Downloaders/Facebook-Downloader.js");
 const TwitterDownloader = require("./lib/Downloaders/Twitter-Downloader.js");
 const SpotifyDownloader = require("./lib/Downloaders/Spotify-Downloader.js");
 const PinterestDownloader = require("./lib/Downloaders/Pinterest-Downloader.js");
-const YouTubeDownloader = require("./lib/Downloaders/YouTube-Downloader/Down.js");
-const YouTubeScraper = require("./lib/Downloaders/YouTube-Downloader/Scraper.js");
+const YouTubeDownloader = require("./lib/Downloaders/YouTube-Downloader.js");
 const SfileDownloader = require("./lib/Downloaders/Sfile-Downloader.js");
 
 /* AI */
@@ -81,6 +80,8 @@ const ToolRemoveBackground = require("./lib/Tools/RemoveBackground.js");
 const ToolDiscordCloud = require("./lib/Tools/DiscordCloud.js");
 
 /* Search */
+const YouTubeScraperSearch = require("./lib/Search/YouTubeSearch.js");
+const YouTubeScraperChannel = require("./lib/Search/YouTubeChannel.js");
 
 /* SHORT URL */
 const Short1 = require("./lib/Shorts/Shorter.Me.js");
@@ -100,7 +101,7 @@ function downloadTiktokUser(url) {
 
 function downloadYouTubeSearch(...q) {
   return new Promise((resolve, reject) => {
-    new YouTubeScraper()
+    new YouTubeScraperChannel()
       .search(...q)
       .then(resolve)
       .catch(reject);
@@ -197,6 +198,7 @@ module.exports = {
   Sfile: SfileDownloader,
   YouTube: {
     search: downloadYouTubeSearch,
+    channelInfo: YouTubeScraperChannel,
     down: downloadYouTube,
   },
   /* AI */
