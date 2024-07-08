@@ -13,11 +13,12 @@
     "metatag-crawler": "^2.1.0",
     "node-fetch": "^2.7.0",
     "qs": "^6.11.2",
+    "rss-parser": "^3.13.0",
     "url": "^0.11.3",
     "ytdl-core": "^4.11.5"
   },
   "name": "@fongsidev/scraper",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "main": "index.js",
   "directories": {
     "lib": "lib"
