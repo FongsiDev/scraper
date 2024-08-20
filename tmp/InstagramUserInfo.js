@@ -360,10 +360,10 @@ class Instagram {
 
 const ig = new Instagram();
 
-//ig.getUserProfile("fgsi_preset").then(console.log).catch(console.log);
+ig.getUserProfile("fgsi_preset").then(console.log).catch(console.log);
 //ig.getPostByHashtag("alightmotion").then(console.log).catch(console.log);
-ig.getDetailPost("C8MuVNCh-3r").then(console.log).catch(console.log);
-
+/*ig.getDetailPost("C8MuVNCh-3r").then(console.log).catch(console.log);
+ */
 module.exports = new Instagram();
 
 function jsonToBody(json) {
