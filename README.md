@@ -12,7 +12,7 @@ npm install @fongsidev/scraper
 
 ### 📋 ([ChangeLog](https://fongsidev-scraper.surge.sh/changelog))
 
-### ⚙️ ([Update Version 1.0.22 => 1.0.23](https://fongsidev-scraper.surge.sh/changelog))
+### ⚙️ ([Update Version 1.0.23 => 1.0.24](https://fongsidev-scraper.surge.sh/changelog))
 
 ### Credits
 
